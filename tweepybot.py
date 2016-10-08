@@ -28,7 +28,7 @@ class LastTweets:
         self.lastid = dict()
 
     def get_lastid (self,keyword):
-    """ Get the last tweet id for a specific keyword """
+        """ Get the last tweet id for a specific keyword """
         if not (keyword in self.lastid):
             search = api.search (keyword, rpp = 1)
             if len(search.ids()) > 0:
@@ -38,7 +38,7 @@ class LastTweets:
         return self.lastid[keyword]
 
     def get_last_status (self,keyword):
-    """Get the statuses since the last id and broadcast them"""
+        """ Get the statuses since the last id and broadcast them """
         lastid = self.get_lastid(keyword)
         search = api.search (keyword, since_id=lastid)
         if search:

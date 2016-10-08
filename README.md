@@ -17,6 +17,7 @@ You need to get
 2. Install dependencies ([virtualenv](http://virtualenv.readthedocs.org/en/latest/) is recommended.)
 
         pip install -r requirements.txt
+        pip install tweepy
 
 3. Configure rtmbot (https://api.slack.com/bot-users)
 
